@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button><a href="/new">+ Add New Post</a></button>
+    <br />
+    <ul>
+      <% allPosts.forEach(Post => { %>
+      <li>
+        <h1><%= Post.title %></h1>
+        <p><%= Post.description %></p>
+        <h3><%= Post.likes %></h3>
+      </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
