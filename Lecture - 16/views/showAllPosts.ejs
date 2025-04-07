@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <button><a href="/signup"> Sign Up User </a></button>
+      <button><a href="/login">Sign In User</a></button>
+    </header>
+    <% if (success && success.length > 0) { %>
+    <h1><%= success %></h1>
+    <% } %>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <button><a href="/new">+ Add New Post</a></button>
+    <br />
+    <ul>
+      <% allPosts.forEach(Post => { %>
+      <li>
+        <h1><%= Post.title %></h1>
+        <p><%= Post.description %></p>
+        <h3><%= Post.likes %></h3>
+      </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
